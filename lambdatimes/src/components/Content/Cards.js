@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';  // {Component} was giving an error - removed 
 import Card from './Card';
 import PropTypes from 'prop-types'
 
@@ -8,8 +8,8 @@ const Cards = ({cards}) => {  // needed to replace props - cards was undefined
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
-          {cards.map(({headline, image, author}, i) => 
-            <Card headline={headline} iamge={image} author={author} key={i}/>
+          {cards.map(({headline, img, author}, i) => 
+            <Card headline={headline} iamge={img} author={author} key={i}/>
           )}
     </div>
   )
@@ -19,10 +19,10 @@ const Cards = ({cards}) => {  // needed to replace props - cards was undefined
 
 Cards.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({
+    img: PropTypes.string,
     headline: PropTypes.string,
-    tab: PropTypes.string,
-    image: PropTypes.string,
     author: PropTypes.string,
+    tab: PropTypes.string,
   }))
 }
 
