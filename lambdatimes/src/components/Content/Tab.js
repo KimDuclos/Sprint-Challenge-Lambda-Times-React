@@ -8,10 +8,9 @@ const Tab = ({tab, selectedTabHandler, selectedTab}) => {  // replaced props to 
   return (
     <div
       className={`tab ${selectedTab === tab ? 'active-tab' : null}`}
-        onClick={() => selectedTabHandler(tab)}
-        /* Replace this dummy click handler function with your selectTabHandler function from props 
-         you'll need to pass the `tab` in as an argument to this handler. */
-     >
+        onClick={() => selectedTabHandler(tab)}>
+        {/* Replace this dummy click handler function with your selectTabHandler function from props 
+         you'll need to pass the `tab` in as an argument to this handler. */}
     </div>
   );
 };
