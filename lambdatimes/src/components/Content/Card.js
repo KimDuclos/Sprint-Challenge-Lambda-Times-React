@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import data from '../../data';
-
+import './Card.css';
 
 const Card = ({headline, img, author}) => { // needed to replace props to fix undefined errors
   return (
@@ -10,7 +9,7 @@ const Card = ({headline, img, author}) => { // needed to replace props to fix un
       <div className="author">
         <div className="image-container">
           {/* added alt - no alt causes warning */}
-          <img src={img} alt="articleImage"/> 
+          <img src={img} alt="articleImage" className="articleImage"/> 
         </div>
         <span>By {author}</span>
       </div>

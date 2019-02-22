@@ -9,7 +9,7 @@ const Cards = ({cards}) => {  // needed to replace props - cards was undefined
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
           {cards.map(({headline, img, author}, i) => 
-            <Card headline={headline} iamge={img} author={author} key={i}/>
+            <Card headline={headline} img={img} author={author} key={i}/>
           )}
     </div>
   )
