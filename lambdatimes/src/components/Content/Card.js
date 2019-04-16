@@ -1,19 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import './Card.css';
 
-const Card = props => {
+const Card = ({headline, img, author}) => { // needed to replace props to fix undefined errors
   return (
     <div className="card">
-      <div className="headline">{/* headline goes here */}</div>
+      <div className="headline">{headline}</div>
       <div className="author">
-        <div className="img-container">
-          <img src={'' /* image source goes here */} />
+        <div className="image-container">
+          {/* added alt - no alt causes warning */}
+          <img src={img} alt="articleImage" className="articleImage"/> 
         </div>
-        <span>By {/* author goes here */}</span>
+        <span>By {author}</span>
       </div>
     </div>
   );
 };
 
 // Make sure to include PropTypes.
+
+Card.propTypes = {
+  headline: PropTypes.string,
+  author: PropTypes.string,
+  img: PropTypes.string,
+}
 
 export default Card;

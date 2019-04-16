@@ -29,9 +29,26 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+    - Used to catch more bugs before they affect other parts of code
+    - Validates that the correct data type is used i.e. makes sure a string is a string.
+
 - [ ] Describe a life-cycle event in React?
+
+    - Consists of Birth/Mounting, Growth/Updating, Death/Unmounting
+    - Birth/Mounting is when the component is built, data is defined and render is invoked.
+    - Growth/Updating is when data can be changed and rendered again
+    - Death/Unmounting is when the component is no longer used and removed
+
 - [ ] Explain the details of a Higher Order Component?
+    - Takes a component and returns a new component
+    - Rather than changing props in a UI, it changes a component into another component
+
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+    - CSS stylesheets
+    - inline styling
+    - Styled-components
 
 ## Project Setup
 

@@ -1,23 +1,74 @@
 import React from 'react';
+import styled from 'styled-components';
 
-// Refactor this component to use styled components and not classNames. 
-// You can find the corresponding CSS in the CSS/index.css file
+// whole container
+const ContainerStyle = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  background-color: black;
+`;
+
+// content container
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  color: white;
+  padding: 0 20px 0 20px;
+`;
+
+// topic and search
+const ContainerLeft = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 14px;
+  span {
+    font-weight: bold;
+    margin: 0 20% 0 0;
+  }
+`;
+
+// news categories
+const ContainerCenter = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 4;
+  justify-content: center;
+  margin: 0 12% 0 0;
+  font-size: 14px; 
+  span {
+    margin: 0 6% 0 0;
+  }
+  :last-child { margin-right: 0;};
+`;
+
+// login
+const ContainerRight = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+`;
+
 
 const TopBar = () => {
   return (
-    <div className="top-bar">
-      <div className="container">
-        <div className="container-left">
+    <ContainerStyle>
+      <Container>
+        <ContainerLeft>
           <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
+        </ContainerLeft>
+        <ContainerCenter>
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
+        </ContainerCenter>
+        <ContainerRight>
           <span>LOG IN</span>
-        </div>
-      </div>
-    </div>
+        </ContainerRight>
+      </Container>
+    </ContainerStyle>
   )
 }
 
